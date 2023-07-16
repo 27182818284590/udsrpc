@@ -15,8 +15,6 @@ func New() *UDSRPC {
 }
 
 func (ur *UDSRPC) DoFoo(ctx context.Context, req *foo.FooReq) (*foo.FooResp, error) {
-	println(req.Text)
-
 	return &foo.FooResp{
 		User: req.User,
 	}, nil
